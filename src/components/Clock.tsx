@@ -1,8 +1,14 @@
 "use client";
 
 import { format } from "date-fns";
+import { Metadata } from "next";
 import { useEffect, useState } from "react";
 import { SlidingNumber } from "../../components/motion-primitives/sliding-number";
+export const metadata: Metadata = {
+  title: "Clockify React",
+  description:
+    "A modern live clock application powered by React, Next.js, and useEffect",
+};
 
 const Clock = () => {
   const [hours, setHours] = useState("00");
