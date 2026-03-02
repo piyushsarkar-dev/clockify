@@ -1,15 +1,24 @@
 "use client";
 
 import { format } from "date-fns";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SlidingNumber } from "../../components/motion-primitives/sliding-number";
 
 const Clock = () => {
-  const [hours, setHours] = useState("10");
-  const [minutes, setMinutes] = useState("12");
-  const [secoend, setSecoend] = useState("55");
-  const [ampm, setAmpm] = useState("Am");
+  const [hours, setHours] = useState("00");
+  const [minutes, setMinutes] = useState("00");
+  const [secoend, setSecoend] = useState("00");
+  const [ampm, setAmpm] = useState("XX");
   const [date, setDate] = useState(format(new Date(), "eeee, dd LLLL yyyy"));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHours(format(new Date(), "hh"));
+      setMinutes(format(new Date(), "mm"));
+      setSecoend(format(new Date(), "ss"));
+      setAmpm(format(new Date(), "a"));
+    }, 1000 * 1);
+  });
 
   return (
     <section>
