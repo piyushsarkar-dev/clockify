@@ -1,5 +1,6 @@
 "use client";
 
+import { format } from "date-fns";
 import { useState } from "react";
 import { SlidingNumber } from "../../components/motion-primitives/sliding-number";
 
@@ -8,11 +9,10 @@ const Clock = () => {
   const [minutes, setMinutes] = useState("12");
   const [secoend, setSecoend] = useState("55");
   const [ampm, setAmpm] = useState("Am");
-  const [date, setDate] = useState("02-03-2026");
+  const [date, setDate] = useState(format(new Date(), "eeee, dd LLLL yyyy"));
 
   return (
     <section>
-      {" "}
       <div className="space-y-4">
         <div className="flex items-center gap-1 font-mono text-9xl">
           <SlidingNumber
