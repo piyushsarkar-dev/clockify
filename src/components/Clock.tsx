@@ -17,8 +17,13 @@ const Clock = () => {
       setMinutes(format(new Date(), "mm"));
       setSecoend(format(new Date(), "ss"));
       setAmpm(format(new Date(), "a"));
+      setDate(format(new Date(), "eeee, dd LLLL yyyy"));
     }, 1000 * 1);
-  });
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <section>
