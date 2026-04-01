@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description:
     "A modern live clock application powered by React, Next.js, and useEffect",
 };
-
 const Clock = () => {
   const [hours, setHours] = useState("00");
   const [minutes, setMinutes] = useState("00");
