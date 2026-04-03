@@ -7,7 +7,6 @@ export const metadata: Metadata = {
     "A modern live clock application powered by React, Next.js, and useEffect",
 };
 
-
 const page = () => {
   return (
     <section className="grid min-h-dvh place-items-center">
