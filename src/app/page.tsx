@@ -1,3 +1,4 @@
+import ClockCard from "@/components/customui/ClockCard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,11 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <section className="grid h-[90dvh] place-items-center"></section>;
+  return (
+    <section className="grid h-[90dvh] place-items-center">
+      <ClockCard />
+    </section>
+  );
 };
 
 export default page;
