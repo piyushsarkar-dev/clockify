@@ -26,8 +26,8 @@ const ClockCard = () => {
   return (
     <div>
       <GlassSurface
-        width={800}
-        height={300}
+        width={1000}
+        height={350}
         borderRadius={30}>
         <div className="space-y-4">
           <div className="flex items-center gap-1 font-mono text-9xl">
