@@ -19,7 +19,7 @@ const ClockCard = () => {
       setMinutes(format(new Date(), "mm"));
       setSecoend(format(new Date(), "ss"));
       setAmPm(format(new Date(), "a"));
-      setDate(format(new Date(), "eeee, dd LLLL yyyy"));
+      setDate(format(new Date(), "eeee, dd LLLL yyy"));
     }, 100);
     return () => clearInterval(interval);
   }, []);
